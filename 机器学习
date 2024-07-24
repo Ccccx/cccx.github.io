@@ -1,0 +1,43 @@
+# 环境
+## conda 
+https://docs.conda.io/en/latest/
+安装完毕要配置环境变量
+
+
+# 创建环境
+ conda create -n ai python=3.10
+# 激活环境
+conda activate ai
+
+pytorch
+https://pytorch.org/
+
+
+选择系统、版本后复制命令安装，没有GPU选择CPU，不要换源，防止安装失败
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+cuda
+查看是否支持cudua，以及GPU占用情况
+PS C:\Users\dell> nvidia-smi
+Wed Jul 24 10:09:10 2024
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 536.23                 Driver Version: 536.23       CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                     TCC/WDDM  | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA GeForce GTX 1660      WDDM  | 00000000:01:00.0  On |                  N/A |
+| 37%   46C    P5              13W / 120W |   1606MiB /  6144MiB |      9%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+Nvida官网安装：https://developer.nvidia.com/cuda-11-8-0-download-archive?target_os=Linux
+# 安装完毕后，查看版本
+nvcc --version
+ 
+jupyter
+pycharm 需要旗舰版才可以用。使用netboot方式调试py
+pip install jupyter 
+tqdm
+安装进度条工具
+pip install tqdm
